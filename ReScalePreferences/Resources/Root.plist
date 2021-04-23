@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>PFHeaderCell</string>
+			<key>background</key>
+			<string>#FF2D55</string>
+			<key>image</key>
+			<string>/Library/PreferenceBundles/ReScalePreferences.bundle/header.png</string>
+			<key>height</key>
+			<integer>158</integer>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>default</key>
+			<string></string>
+			<key>defaults</key>
+			<string>tf.festival.rescale</string>
+			<key>key</key>
+			<string>statusBarOverride</string>
+			<key>label</key>
+			<string>STATUS_BAR_OVERRIDE</string>
+			<key>validTitles</key>
+			<array>
+				<string>STATUS_BAR_NONE</string>
+				<!-- <string>STATUS_BAR_CARPLAY</string> -->
+				<!-- <string>STATUS_BAR_CARPLAY_HORIZONTAL</string> -->
+				<!-- <string>STATUS_BAR_CARPLAY_VERTICAL</string> -->
+				<!-- <string>STATUS_BAR_FALLBACK</string> -->
+				<!-- <string>STATUS_BAR_LEGACYPHONE</string> -->
+				<string>STATUS_BAR_PAD</string>
+				<string>STATUS_BAR_PAD_FORCEDCELLULAR</string>
+				<string>STATUS_BAR_PAD_FORCEDNOCELL</string>
+				<string>STATUS_BAR_PHONE</string>
+				<string>STATUS_BAR_ROUNDEDPAD</string>
+				<string>STATUS_BAR_ROUNDEDPAD_FORCEDCELLULAR</string>
+				<string>STATUS_BAR_ROUNDEDPAD_FORCEDNOCELL</string>
+				<string>STATUS_BAR_SPLIT</string>
+				<string>STATUS_BAR_SPLIT54</string>
+				<string>STATUS_BAR_SPLIT58</string>
+				<string>STATUS_BAR_SPLIT_2X61</string>
+				<string>STATUS_BAR_SPLIT61</string>
+				<!-- <string>STATUS_BAR_SPLIT61_58CLASSIC</string> -->
+				<string>STATUS_BAR_SPLIT61_ZOOMED</string>
+				<string>STATUS_BAR_SPLIT65</string>
+				<string>STATUS_BAR_SPLIT65_ZOOMED</string>
+				<string>STATUS_BAR_SPLIT67</string>
+				<string>STATUS_BAR_IOS</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string></string>
+				<!-- <string>_UIStatusBarVisualProvider_CarPlay</string> -->
+				<!-- <string>_UIStatusBarVisualProvider_CarPlayHorizontal</string> -->
+				<!-- <string>_UIStatusBarVisualProvider_CarPlayVertical</string> -->
+				<!-- <string>_UIStatusBarVisualProvider_Fallback</string> -->
+				<!-- <string>_UIStatusBarVisualProvider_LegacyPhone</string> -->
+				<string>_UIStatusBarVisualProvider_Pad</string>
+				<string>_UIStatusBarVisualProvider_Pad_ForcedCellular</string>
+				<string>_UIStatusBarVisualProvider_Pad_ForcedNoCell</string>
+				<string>_UIStatusBarVisualProvider_Phone</string>
+				<string>_UIStatusBarVisualProvider_RoundedPad</string>
+				<string>_UIStatusBarVisualProvider_RoundedPad_ForcedCellular</string>
+				<string>_UIStatusBarVisualProvider_RoundedPad_ForcedNoCell</string>
+				<string>_UIStatusBarVisualProvider_Split</string>
+				<string>_UIStatusBarVisualProvider_Split54</string>
+				<string>_UIStatusBarVisualProvider_Split58</string>
+				<string>_UIStatusBarVisualProvider_Split2x61</string>
+				<string>_UIStatusBarVisualProvider_Split61</string>
+				<!-- <string>_UIStatusBarVisualProvider_Split61_58Classic</string> -->
+				<string>_UIStatusBarVisualProvider_Split61_Zoomed</string>
+				<string>_UIStatusBarVisualProvider_Split65</string>
+				<string>_UIStatusBarVisualProvider_Split65_Zoomed</string>
+				<string>_UIStatusBarVisualProvider_Split67</string>
+				<string>_UIStatusBarVisualProvider_iOS</string>
+			</array>
+			<key>staticTextMessage</key>
+			<string>STATUS_BAR_OVERRIDE_FOOTER</string>
+			<key>PostNotification</key>
+			<string>ml.festival.lockwatch2/WatchSelected</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>respring</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>RESTART_SPRINGBOARD_TITLE</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>IPHONE</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>IPAD</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>CUSTOM_RESOLUTION_TITLE</string>
+			<key>footerText</key>
+			<string>CUSTOM_RESOLUTION_FOOTER</string>
+		</dict>
+		<dict>
+			<key>keyboard</key>
+			<string>phone</string>
+			<key>placeholder</key>
+			<string>CUSTOM_RESOLUTION_WIDTH</string>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>set</key>
+			<string>setCustomCanvasWidth:</string>
+			<key>get</key>
+			<string>getCustomCanvasWidth</string>
+		</dict>
+		<dict>
+			<key>placeholder</key>
+			<string>CUSTOM_RESOLUTION_HEIGHT</string>
+			<key>keyboard</key>
+			<string>phone</string>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>set</key>
+			<string>setCustomCanvasHeight:</string>
+			<key>get</key>
+			<string>getCustomCanvasHeight</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>applyCustomResolution</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>APPLY_RESOLUTION_TITLE</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Re:Scale 2</string>
+</dict>
+</plist>

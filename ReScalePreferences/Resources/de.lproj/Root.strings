@@ -1,0 +1,79 @@
+{
+	"GENERIC_CONFIRM" = "OK";
+	"GENERIC_CANCEL" = "Abbrechen";
+
+	"STATUS_BAR_OVERRIDE" = "Statusleiste";
+	"STATUS_BAR_OVERRIDE_FOOTER" = "Das Überschreiben der Statusleiste erfordert iOS 11 oder neuer. Einige Statusleisten sind möglicherweise nicht für jede Version von iOS verfügbar.";
+
+	"STATUS_BAR_NONE" = "Standard";
+	"STATUS_BAR_CARPLAY" = "CarPlay";
+	"STATUS_BAR_CARPLAY_HORIZONTAL" = "CarPlay (horizontal)";
+	"STATUS_BAR_CARPLAY_VERTICAL" = "CarPlay (vertikal)";
+	"STATUS_BAR_FALLBACK" = "Fallback";
+	"STATUS_BAR_LEGACYPHONE" = "iPhone Legacy";
+	"STATUS_BAR_PAD" = "iPad";
+	"STATUS_BAR_PAD_FORCEDCELLULAR" = "iPad – Mobiles Netz erzwungen";
+	"STATUS_BAR_PAD_FORCEDNOCELL" = "iPad – Kein Netz erzwungen";
+	"STATUS_BAR_PHONE" = "iPhone";
+	"STATUS_BAR_ROUNDEDPAD" = "iPad – Abgerundet";
+	"STATUS_BAR_ROUNDEDPAD_FORCEDCELLULAR" = "iPad – Abgerundet, Mobiles Netz erzwungen";
+	"STATUS_BAR_ROUNDEDPAD_FORCEDNOCELL" = "iPad – Abgerundet, Kein Netz erzwungen";
+	"STATUS_BAR_SPLIT" = "iPhone – Geteilt";
+	"STATUS_BAR_SPLIT54" = "iPhone – Geteilt, 5.4\"";
+	"STATUS_BAR_SPLIT58" = "iPhone – Geteilt, 5.8\"";
+	"STATUS_BAR_SPLIT61" = "iPhone – Geteilt, 6.1\"";
+	"STATUS_BAR_SPLIT_2X61" = "iPhone – Geteilt, 6.1\" (iPhone XR, 11)";
+	"STATUS_BAR_SPLIT61_58CLASSIC" = "iPhone – Geteilt, 6.1\" (5.8\" Klassisch)";
+	"STATUS_BAR_SPLIT61_ZOOMED" = "iPhone – Geteilt, 6.1\" Vergrößert";
+	"STATUS_BAR_SPLIT65" = "iPhone – Geteilt, 6.5\"";
+	"STATUS_BAR_SPLIT65_ZOOMED" = "iPhone – Geteilt, 6.5\" Vergrößert";
+	"STATUS_BAR_SPLIT67" = "iPhone – Geteilt, 6.7\"";
+	"STATUS_BAR_IOS" = "iOS";
+
+	"IPHONE" = "iPhone";
+
+	"iphone35" = "iPhone 4s (3.5\", @2x)";
+	"iphone4" = "iPhone 5/5s/5c/SE (4\", @2x)";
+	"iphone47" = "iPhone 6/6s/7/8, SE 2020 (4.7\", @2x)";
+	"iphone55" = "iPhone 6/6s/7/8 Plus (5.5\", @3x)";
+	"iphone58" = "iPhone X/XS, 11 Pro (5.8\", @3x)";
+	"iphone61" = "iPhone XR (6.1\", @2x)";
+	"iphone65" = "iPhone XS Max, 11 Pro Max (6.5\", @3x)";
+	"iphone61-12pro" = "iPhone 12/12 Pro (6.1\", @3x)";
+	"iphone54-12mini" = "iPhone 12 mini (5.4\", @3x)";
+	"iphone67-12promax" = "iPhone 12 Pro Max (6.7\", @3x)";
+
+	"IPAD" = "iPad";
+
+	"ipad97-1x" = "iPad 2, iPad mini (9.7\", @1x)";
+	"ipad97" = "iPad 3/4/5/6, Air 1/2, mini 2/3/4/5, Pro (9.7\", @2x)";
+	"ipad102" = "iPad 7/8 (10.2\", @2x)";
+	"ipad105" = "iPad Air 3, Pro (10.5\", @2x)";
+	"ipad109" = "iPad Air 4 (10.9\", @2x)";
+	"ipad11" = "iPad Pro (11\", @2x)";
+	"ipad129" = "iPad Pro (12.9\", @2x)";
+
+	"RESTART_SPRINGBOARD_TITLE" = "SpringBoard neu starten";
+	"RESTART_SPRINGBOARD_PROMPT" = "SpringBoard wird neu gestartet, um Änderungen anzuwenden. Möchtest du fortfahren?";
+	"RESTART_SPRINGBOARD_CONFIRM" = "SpringBoard neu starten";
+
+	"NOT_SUPPORTED_TITLE" = "Nicht unterstützte Auflösung";
+	"NOT_SUPPORTED_DESCRIPTION" = "Die gewählte Auflösung (%tux%tu@%0.fx) wird auf deinem Gerät nicht unterstützt. Fahre auf eigenes Risiko fort.";
+	"NOT_SUPPORTED_CONFIRM" = "Auflösung verwenden";
+
+	"SCALE_MISMATCH_TITLE" = "Nicht übereinstimmende Bildschirmskalierung";
+	"SCALE_MISMATCH_PROMPT" = "Die gewählte Auflösung (%tux%tu@%0.fx) stimmt nicht mit der Skalierung deines Bildschirms (@%0.fx) überein. Möchtest du, dass Re:Scale die Auflösung an deinen Bildschirm anpasst?";
+	"SCALE_MISMATCH_USE_RESOLUTION" = "Unveränderte Auflösung benutzen";
+
+	"APPLY_RESOLUTION_TITLE" = "Auflösung anwenden";
+	"APPLY_RESOLUTION_PROMPT" = "Möchtest du die gewählte Auflösung (%tux%tu@%0.fx) anwenden?";
+	"APPLY_RESOLUTION_CONFIRM" = "Anwenden";
+
+	"CUSTOM_RESOLUTION_TITLE" = "Eigene Auflösung";
+	"CUSTOM_RESOLUTION_FOOTER" = "Warnung: Eigene Auflösungen werden nicht offiziell unterstützt. Die Nutzung erfolgt auf eigene Gefahr!";
+	"CUSTOM_RESOLUTION_WIDTH" = "Breite (px)";
+	"CUSTOM_RESOLUTION_HEIGHT" = "Höhe (px)";
+
+	"CUSTOM_RESOLUTION_INVALID_TITLE" = "Ungültige Auflösung";
+	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "Die gewählte Auflösung (%tux%tu@%0.fx) ist ungültig und kann nicht angewendet werden.";
+}
