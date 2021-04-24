@@ -11,7 +11,27 @@
 @end
 
 %hook UIKeyboardImpl
++ (CGSize)defaultSizeForInterfaceOrientation:(UIInterfaceOrientation)arg1 {
+	CGSize r = %orig;
+
+	if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+		return (CGSize){ CGRectInset(UIScreen.mainScreen.bounds, [self deviceSpecificPaddingForInterfaceOrientation:arg1 inputMode:nil].left, 0).size.width, r.height };
+	}
+
+	return r;
+}
+
 + (CGSize)keyboardSizeForInterfaceOrientation:(UIInterfaceOrientation)arg1 {
+	CGSize r = %orig;
+
+	if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+		return (CGSize){ CGRectInset(UIScreen.mainScreen.bounds, [self deviceSpecificPaddingForInterfaceOrientation:arg1 inputMode:nil].left, 0).size.width, r.height };
+	}
+
+	return r;
+}
+
++ (CGSize)sizeForInterfaceOrientation:(UIInterfaceOrientation)arg1 {
 	CGSize r = %orig;
 
 	if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
