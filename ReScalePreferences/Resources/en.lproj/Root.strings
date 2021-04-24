@@ -23,11 +23,12 @@
 	"STATUS_BAR_SPLIT58" = "iPhone – Split, 5.8\"";
 	"STATUS_BAR_SPLIT61" = "iPhone – Split, 6.1\"";
 	"STATUS_BAR_SPLIT" = "iPhone – Split, 6.1\" (iPhone XR, 11)";
+	"STATUS_BAR_SPLIT_2X61" = "iPhone – Split, 6.1\" (iPhone XR, 11)";
 	"STATUS_BAR_SPLIT61_58CLASSIC" = "iPhon – Split, 6.1\" (5.8\" Classic)";
 	"STATUS_BAR_SPLIT61_ZOOMED" = "iPhone – Split, 6.1\", Zoomed";
 	"STATUS_BAR_SPLIT65" = "iPhone – Split, 6.5\"";
 	"STATUS_BAR_SPLIT65_ZOOMED" = "iPhone – Split, 6.5\", Zoomed";
-	"STATUS_BAR_SPLIT65" = "iPhone – Split, 6.7\"";
+	"STATUS_BAR_SPLIT67" = "iPhone – Split, 6.7\"";
 	"STATUS_BAR_IOS" = "iOS";
 
 	"IPHONE" = "iPhone";
