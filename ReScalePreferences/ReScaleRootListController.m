@@ -92,6 +92,8 @@
 }
 
 - (void)applyCustomResolution {
+	[self.view endEditing:YES];
+
 	if (!_customCanvasWidth ||
 		!_customCanvasHeight ||
 		_customCanvasWidth < CGRectGetWidth(UIScreen.mainScreen.nativeBounds) / UIScreen.mainScreen.scale ||
