@@ -5,7 +5,7 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = ReScalePreferences
 
-ReScalePreferences_FILES = ReScaleRootListController.m PFHeaderCell.mm
+ReScalePreferences_FILES = $(wildcard *.m) PFHeaderCell.mm
 ReScalePreferences_FRAMEWORKS = UIKit
 ReScalePreferences_PRIVATE_FRAMEWORKS = Preferences
 ReScalePreferences_INSTALL_PATH = /Library/PreferenceBundles

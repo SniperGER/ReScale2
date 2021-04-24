@@ -66,7 +66,7 @@
 	"SCALE_MISMATCH_USE_RESOLUTION" = "Use unmodified resolution";
 
 	"APPLY_RESOLUTION_TITLE" = "Apply Resolution";
-	"APPLY_RESOLUTION_PROMPT" = "Would like like to apply the selected resolution (%tux%tu@%0.fx)?";
+	"APPLY_RESOLUTION_PROMPT" = "Would like like to apply the selected resolution (%tux%tu)?";
 	"APPLY_RESOLUTION_CONFIRM" = "Apply";
 	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Apply (reversed)";
 
@@ -74,7 +74,13 @@
 	"CUSTOM_RESOLUTION_FOOTER" = "Warning: Custom resolutions are not officially supported. Use this at your own risk!";
 	"CUSTOM_RESOLUTION_WIDTH" = "Width (px)";
 	"CUSTOM_RESOLUTION_HEIGHT" = "Height (px)";
+	"CUSTOM_RESOLUTION_SAVE" = "Save Resolution";
+	"CUSTOM_RESOLUTION_SAVED_TITLE" = "Resolution saved";
+	"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" = "Your custom resolution (%tux%tu) has been saved.";
 
 	"CUSTOM_RESOLUTION_INVALID_TITLE" = "Invalid Resolution";
 	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "The selected resolution (%tux%tu@%0.fx) is invalid and cannot be applied.";
+
+	"CUSTOM_RESOLUTION_LIST_TITLE" = "Saved Resolutions";
+	"CUSTOM_RESOLUTION_LIST_NO_ENTRIES" = "Nothing to see here.";
 }

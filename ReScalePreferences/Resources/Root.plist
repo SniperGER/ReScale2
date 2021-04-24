@@ -120,6 +120,21 @@
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>CUSTOM_RESOLUTION_TITLE</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>ReScaleCustomResolutionController</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>CUSTOM_RESOLUTION_LIST_TITLE</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
 			<key>footerText</key>
 			<string>CUSTOM_RESOLUTION_FOOTER</string>
 		</dict>
@@ -154,6 +169,14 @@
 			<string>PSButtonCell</string>
 			<key>label</key>
 			<string>APPLY_RESOLUTION_TITLE</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>saveCustomResolution</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>CUSTOM_RESOLUTION_SAVE</string>
 		</dict>
 	</array>
 	<key>title</key>

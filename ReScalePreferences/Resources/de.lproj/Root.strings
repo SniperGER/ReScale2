@@ -66,7 +66,7 @@
 	"SCALE_MISMATCH_USE_RESOLUTION" = "Unveränderte Auflösung benutzen";
 
 	"APPLY_RESOLUTION_TITLE" = "Auflösung anwenden";
-	"APPLY_RESOLUTION_PROMPT" = "Möchtest du die gewählte Auflösung (%tux%tu@%0.fx) anwenden?";
+	"APPLY_RESOLUTION_PROMPT" = "Möchtest du die gewählte Auflösung (%tux%tu) anwenden?";
 	"APPLY_RESOLUTION_CONFIRM" = "Anwenden";
 	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Anwenden (umgekehrt)";
 
@@ -74,7 +74,14 @@
 	"CUSTOM_RESOLUTION_FOOTER" = "Warnung: Eigene Auflösungen werden nicht offiziell unterstützt. Die Nutzung erfolgt auf eigene Gefahr!";
 	"CUSTOM_RESOLUTION_WIDTH" = "Breite (px)";
 	"CUSTOM_RESOLUTION_HEIGHT" = "Höhe (px)";
+	"CUSTOM_RESOLUTION_SAVE" = "Auflösung speichern";
+
+	"CUSTOM_RESOLUTION_SAVED_TITLE" = "Auflösung gespeichert";
+	"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" = "Deine eigene Auflösung (%tux%tu) wurde gespeichert.";
 
 	"CUSTOM_RESOLUTION_INVALID_TITLE" = "Ungültige Auflösung";
 	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "Die gewählte Auflösung (%tux%tu@%0.fx) ist ungültig und kann nicht angewendet werden.";
+
+	"CUSTOM_RESOLUTION_LIST_TITLE" = "Eigene Auflösungen";
+	"CUSTOM_RESOLUTION_LIST_NO_ENTRIES" = "Hier gibt's nichts zu sehen.";
 }

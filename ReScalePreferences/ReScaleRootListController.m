@@ -114,7 +114,7 @@
 	BOOL isiPad = UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad;
 
 	UIAlertController* alertController = [UIAlertController alertControllerWithTitle:[self.class localizedStringForKey:@"CUSTOM_RESOLUTION_TITLE" value:nil table:@"Root"]
-																			 message:[NSString stringWithFormat:[self.class localizedStringForKey:@"APPLY_RESOLUTION_PROMPT" value:nil table:@"Root"], _customCanvasWidth, _customCanvasHeight, UIScreen.mainScreen.scale]
+																			 message:[NSString stringWithFormat:[self.class localizedStringForKey:@"APPLY_RESOLUTION_PROMPT" value:nil table:@"Root"], _customCanvasWidth, _customCanvasHeight]
 																	  preferredStyle:(isiPad ? UIAlertControllerStyleAlert : UIAlertControllerStyleActionSheet)];
 
 	UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"APPLY_RESOLUTION_CONFIRM" value:nil table:@"Root"] style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action) {
@@ -258,6 +258,57 @@
 
 	[alertController addAction:confirmAction];
 	[alertController addAction:cancelAction];
+	[self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)saveCustomResolution {
+	[self.view endEditing:YES];
+
+	if (!_customCanvasWidth ||
+		!_customCanvasHeight ||
+		_customCanvasWidth < CGRectGetWidth(UIScreen.mainScreen.nativeBounds) / UIScreen.mainScreen.scale ||
+		_customCanvasHeight < CGRectGetHeight(UIScreen.mainScreen.nativeBounds) / UIScreen.mainScreen.scale) {
+
+		UIAlertController* alertController = [UIAlertController alertControllerWithTitle:[self.class localizedStringForKey:@"CUSTOM_RESOLUTION_INVALID_TITLE" value:nil table:@"Root"]
+																				 message:[NSString stringWithFormat:[self.class localizedStringForKey:@"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" value:nil table:@"Root"], _customCanvasWidth, _customCanvasHeight, UIScreen.mainScreen.scale]
+																		  preferredStyle:UIAlertControllerStyleAlert];
+
+		UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"GENERIC_CONFIRM" value:nil table:@"Root"] style:UIAlertActionStyleDefault handler:nil];
+
+		[alertController addAction:confirmAction];
+		[self presentViewController:alertController animated:YES completion:nil];
+
+		return;
+	}
+
+	CFArrayRef storedResolutions;
+	if ((storedResolutions = (CFArrayRef)CFPreferencesCopyAppValue(CFSTR("customResolutions"), CFSTR("tf.festival.rescale")))) {
+		NSMutableArray* customResolutions = [(__bridge NSArray*)storedResolutions mutableCopy];
+
+		[customResolutions addObject:@{
+			@"canvas_width": @(_customCanvasWidth),
+			@"canvas_height": @(_customCanvasHeight)
+		}];
+
+		CFPreferencesSetAppValue(CFSTR("customResolutions"), (CFPropertyListRef)customResolutions, CFSTR("tf.festival.rescale"));
+	} else {
+		NSArray* customResolutions = @[
+			@{
+				@"canvas_width": @(_customCanvasWidth),
+				@"canvas_height": @(_customCanvasHeight)
+			}
+		];
+
+		CFPreferencesSetAppValue(CFSTR("customResolutions"), (CFPropertyListRef)customResolutions, CFSTR("tf.festival.rescale"));
+	}
+
+	UIAlertController* alertController = [UIAlertController alertControllerWithTitle:[self.class localizedStringForKey:@"CUSTOM_RESOLUTION_SAVED_TITLE" value:nil table:@"Root"]
+																			 message:[NSString stringWithFormat:[self.class localizedStringForKey:@"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" value:nil table:@"Root"], _customCanvasWidth, _customCanvasHeight]
+																	  preferredStyle:UIAlertControllerStyleAlert];
+
+	UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"GENERIC_CONFIRM" value:nil table:@"Root"] style:UIAlertActionStyleDefault handler:nil];
+
+	[alertController addAction:confirmAction];
 	[self presentViewController:alertController animated:YES completion:nil];
 }
 
