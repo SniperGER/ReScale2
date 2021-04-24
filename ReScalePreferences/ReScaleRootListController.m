@@ -242,6 +242,29 @@
     return _customCanvasWidth ? [NSNumber numberWithInteger:_customCanvasWidth] : nil;
 }
 
+- (void)resetResolution {
+	BOOL isiPad = UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad;
+
+	UIAlertController* alertController = [UIAlertController alertControllerWithTitle:[self.class localizedStringForKey:@"RESET_RESOLUTION_TITLE" value:nil table:@"Root"]
+																			 message:[self.class localizedStringForKey:@"RESET_RESOLUTION_PROMPT" value:nil table:@"Root"]
+																	  preferredStyle:(isiPad ? UIAlertControllerStyleAlert : UIAlertControllerStyleActionSheet)];
+
+	UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"RESET_RESOLUTION_CONFIRM" value:nil table:@"Root"] style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action) {
+		CFPreferencesSetAppValue(CFSTR("canvas_width"), NULL, CFSTR("tf.festival.rescale"));
+		CFPreferencesSetAppValue(CFSTR("canvas_height"), NULL, CFSTR("tf.festival.rescale"));
+
+		CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
+
+		[self respring];
+	}];
+
+	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"GENERIC_CANCEL" value:nil table:@"Root"] style:UIAlertActionStyleCancel handler:nil];
+
+	[alertController addAction:confirmAction];
+	[alertController addAction:cancelAction];
+	[self presentViewController:alertController animated:YES completion:nil];
+}
+
 - (void)respring {
 	UIAlertController* alertController = [UIAlertController alertControllerWithTitle:[self.class localizedStringForKey:@"RESTART_SPRINGBOARD_TITLE" value:nil table:@"Root"]
 																			 message:[self.class localizedStringForKey:@"RESTART_SPRINGBOARD_PROMPT" value:nil table:@"Root"]

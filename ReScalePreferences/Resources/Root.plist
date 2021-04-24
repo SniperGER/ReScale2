@@ -93,6 +93,19 @@
 			<key>PostNotification</key>
 			<string>ml.festival.lockwatch2/WatchSelected</string>
 		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>resetResolution</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>RESET_RESOLUTION_TITLE</string>
+		</dict>
 		<dict>
 			<key>action</key>
 			<string>respring</string>

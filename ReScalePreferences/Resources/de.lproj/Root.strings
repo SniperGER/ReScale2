@@ -70,6 +70,10 @@
 	"APPLY_RESOLUTION_CONFIRM" = "Anwenden";
 	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Anwenden (umgekehrt)";
 
+	"RESET_RESOLUTION_TITLE" = "Auflösung zurücksetzen";
+	"RESET_RESOLUTION_PROMPT" = "Bist du dir sicher, dass du deine Auflösung zurücksetzen möchtest?";
+	"RESET_RESOLUTION_CONFIRM" = "Zurücksetzen";
+
 	"CUSTOM_RESOLUTION_TITLE" = "Eigene Auflösung";
 	"CUSTOM_RESOLUTION_FOOTER" = "Warnung: Eigene Auflösungen werden nicht offiziell unterstützt. Die Nutzung erfolgt auf eigene Gefahr!";
 	"CUSTOM_RESOLUTION_WIDTH" = "Breite (px)";

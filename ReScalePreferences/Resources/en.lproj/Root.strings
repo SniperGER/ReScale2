@@ -70,6 +70,10 @@
 	"APPLY_RESOLUTION_CONFIRM" = "Apply";
 	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Apply (reversed)";
 
+	"RESET_RESOLUTION_TITLE" = "Reset Resolution";
+	"RESET_RESOLUTION_PROMPT" = "Are you sure you would like to reset your resolution?";
+	"RESET_RESOLUTION_CONFIRM" = "Reset";
+
 	"CUSTOM_RESOLUTION_TITLE" = "Custom Resolution";
 	"CUSTOM_RESOLUTION_FOOTER" = "Warning: Custom resolutions are not officially supported. Use this at your own risk!";
 	"CUSTOM_RESOLUTION_WIDTH" = "Width (px)";
