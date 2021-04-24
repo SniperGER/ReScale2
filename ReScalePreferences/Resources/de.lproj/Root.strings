@@ -68,6 +68,7 @@
 	"APPLY_RESOLUTION_TITLE" = "Auflösung anwenden";
 	"APPLY_RESOLUTION_PROMPT" = "Möchtest du die gewählte Auflösung (%tux%tu@%0.fx) anwenden?";
 	"APPLY_RESOLUTION_CONFIRM" = "Anwenden";
+	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Anwenden (umgekehrt)";
 
 	"CUSTOM_RESOLUTION_TITLE" = "Eigene Auflösung";
 	"CUSTOM_RESOLUTION_FOOTER" = "Warnung: Eigene Auflösungen werden nicht offiziell unterstützt. Die Nutzung erfolgt auf eigene Gefahr!";

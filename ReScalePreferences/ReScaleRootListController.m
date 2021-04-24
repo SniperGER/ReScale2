@@ -79,14 +79,14 @@
 #pragma mark - Instance Methods
 
 - (void)applyCanvasWidth:(NSUInteger)canvasWidth canvasHeight:(NSUInteger)canvasHeight {
-	if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
-		// iOS 9 (possibily other versions as well) invert the width and height
-		CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)[NSNumber numberWithInteger:canvasWidth], CFSTR("tf.festival.rescale"));
-		CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)[NSNumber numberWithInteger:canvasHeight], CFSTR("tf.festival.rescale"));
-	} else {
+	// if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
+	// 	// iOS 9 (possibily other versions as well) invert the width and height
+	// 	CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)[NSNumber numberWithInteger:canvasWidth], CFSTR("tf.festival.rescale"));
+	// 	CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)[NSNumber numberWithInteger:canvasHeight], CFSTR("tf.festival.rescale"));
+	// } else {
 		CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)[NSNumber numberWithInteger:canvasWidth], CFSTR("tf.festival.rescale"));
 		CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)[NSNumber numberWithInteger:canvasHeight], CFSTR("tf.festival.rescale"));
-	}
+	// }
 
 	CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 }
@@ -216,9 +216,20 @@
 		[self respring];
 	}];
 
+	UIAlertAction* confirmInvertedAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"APPLY_RESOLUTION_CONFIRM_INVERTED" value:nil table:@"Root"] style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action) {
+		[self applyCanvasWidth:canvasHeight canvasHeight:canvasWidth];
+
+		[self respring];
+	}];
+
 	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"GENERIC_CANCEL" value:nil table:@"Root"] style:UIAlertActionStyleCancel handler:nil];
 
 	[alertController addAction:confirmAction];
+
+	if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+		[alertController addAction:confirmInvertedAction];
+	}
+
 	[alertController addAction:cancelAction];
 	[self presentViewController:alertController animated:YES completion:nil];
 }
