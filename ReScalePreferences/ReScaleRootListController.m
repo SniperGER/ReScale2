@@ -278,7 +278,7 @@
 		posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
 		waitpid(pid, &status, WEXITED);
 	}];
-	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"GENERIC_CONFIRM" value:nil table:@"Root"] style:UIAlertActionStyleCancel handler:nil];
+	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"RESTART_SPRINGBOARD_CANCEL" value:nil table:@"Root"] style:UIAlertActionStyleCancel handler:nil];
 
 	[alertController addAction:confirmAction];
 	[alertController addAction:cancelAction];

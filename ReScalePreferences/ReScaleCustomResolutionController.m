@@ -28,7 +28,7 @@
 		PSSpecifier* resolutionGroupSpecifier = [self specifierAtIndex:0];
 
 		[[[_resolutions reverseObjectEnumerator] allObjects] enumerateObjectsUsingBlock:^(NSDictionary* resolution, NSUInteger index, BOOL* stop) {
-			PSSpecifier* resolutionSpecifier = [PSSpecifier preferenceSpecifierNamed:[NSString stringWithFormat:@"%@x%@", resolution[@"canvas_width"], resolution[@"canvas_height"]]
+			PSSpecifier* resolutionSpecifier = [PSSpecifier preferenceSpecifierNamed:[NSString stringWithFormat:@"%@ x %@", resolution[@"canvas_width"], resolution[@"canvas_height"]]
 																			target:self
 																				set:nil
 																				get:nil
@@ -139,7 +139,7 @@
 		posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
 		waitpid(pid, &status, WEXITED);
 	}];
-	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"GENERIC_CONFIRM" value:nil table:@"Root"] style:UIAlertActionStyleCancel handler:nil];
+	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"RESTART_SPRINGBOARD_CANCEL" value:nil table:@"Root"] style:UIAlertActionStyleCancel handler:nil];
 
 	[alertController addAction:confirmAction];
 	[alertController addAction:cancelAction];

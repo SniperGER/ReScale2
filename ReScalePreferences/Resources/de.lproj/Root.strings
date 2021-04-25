@@ -56,17 +56,18 @@
 	"RESTART_SPRINGBOARD_TITLE" = "SpringBoard neu starten";
 	"RESTART_SPRINGBOARD_PROMPT" = "SpringBoard wird neu gestartet, um Änderungen anzuwenden. Möchtest du fortfahren?";
 	"RESTART_SPRINGBOARD_CONFIRM" = "SpringBoard neu starten";
+	"RESTART_SPRINGBOARD_CANCEL" = "Später";
 
 	"NOT_SUPPORTED_TITLE" = "Nicht unterstützte Auflösung";
-	"NOT_SUPPORTED_DESCRIPTION" = "Die gewählte Auflösung (%tux%tu@%0.fx) wird auf deinem Gerät nicht unterstützt. Fahre auf eigenes Risiko fort.";
+	"NOT_SUPPORTED_DESCRIPTION" = "Die gewählte Auflösung (%tu x %tu) wird auf deinem Gerät nicht unterstützt.\nFahre auf eigenes Risiko fort.";
 	"NOT_SUPPORTED_CONFIRM" = "Auflösung verwenden";
 
 	"SCALE_MISMATCH_TITLE" = "Nicht übereinstimmende Bildschirmskalierung";
-	"SCALE_MISMATCH_PROMPT" = "Die gewählte Auflösung (%tux%tu@%0.fx) stimmt nicht mit der Skalierung deines Bildschirms (@%0.fx) überein. Möchtest du, dass Re:Scale die Auflösung an deinen Bildschirm anpasst?";
+	"SCALE_MISMATCH_PROMPT" = "Die gewählte Auflösung stimmt nicht mit der Skalierung deines Bildschirms überein. Möchtest du, dass Re:Scale die Auflösung an deinen Bildschirm anpasst?";
 	"SCALE_MISMATCH_USE_RESOLUTION" = "Unveränderte Auflösung benutzen";
 
 	"APPLY_RESOLUTION_TITLE" = "Auflösung anwenden";
-	"APPLY_RESOLUTION_PROMPT" = "Möchtest du die gewählte Auflösung (%tux%tu) anwenden?";
+	"APPLY_RESOLUTION_PROMPT" = "Möchtest du die gewählte Auflösung (%tu x %tu) anwenden?";
 	"APPLY_RESOLUTION_CONFIRM" = "Anwenden";
 	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Anwenden (umgekehrt)";
 
@@ -81,10 +82,10 @@
 	"CUSTOM_RESOLUTION_SAVE" = "Auflösung speichern";
 
 	"CUSTOM_RESOLUTION_SAVED_TITLE" = "Auflösung gespeichert";
-	"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" = "Deine eigene Auflösung (%tux%tu) wurde gespeichert.";
+	"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" = "Deine eigene Auflösung (%tu x %tu) wurde gespeichert.";
 
 	"CUSTOM_RESOLUTION_INVALID_TITLE" = "Ungültige Auflösung";
-	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "Die gewählte Auflösung (%tux%tu@%0.fx) ist ungültig und kann nicht angewendet werden.";
+	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "Die gewählte Auflösung (%tu x %tu) ist ungültig und kann nicht angewendet werden.";
 
 	"CUSTOM_RESOLUTION_LIST_TITLE" = "Eigene Auflösungen";
 	"CUSTOM_RESOLUTION_LIST_NO_ENTRIES" = "Hier gibt's nichts zu sehen.";

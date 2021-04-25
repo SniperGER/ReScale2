@@ -57,17 +57,18 @@
 	"RESTART_SPRINGBOARD_TITLE" = "Restart SpringBoard";
 	"RESTART_SPRINGBOARD_PROMPT" = "SpringBoard will be restarted to apply all changed settings. Would you like to continue?";
 	"RESTART_SPRINGBOARD_CONFIRM" = "Restart SpringBoard";
+	"RESTART_SPRINGBOARD_CANCEL" = "Later";
 
 	"NOT_SUPPORTED_TITLE" = "Resolution not supported";
-	"NOT_SUPPORTED_DESCRIPTION" = "The selected resolution (%tux%tu@%0.fx) is not supported on your device. Proceed at your own risk!";
+	"NOT_SUPPORTED_DESCRIPTION" = "The selected resolution (%tu x %tu) is not supported on your device.\nProceed at your own risk!";
 	"NOT_SUPPORTED_CONFIRM" = "Use unsupported resolution";
 
 	"SCALE_MISMATCH_TITLE" = "Display Scale Mismatch";
-	"SCALE_MISMATCH_PROMPT" = "The selected resolution (%tux%tu@%0.fx) does not match your screen scale (@%0.fx). Would you like Re:Scale to adapt this resolution to your screen scale?";
+	"SCALE_MISMATCH_PROMPT" = "The selected resolution does not match your screen scale. Would you like Re:Scale to adapt this resolution to your screen scale?";
 	"SCALE_MISMATCH_USE_RESOLUTION" = "Use unmodified resolution";
 
 	"APPLY_RESOLUTION_TITLE" = "Apply Resolution";
-	"APPLY_RESOLUTION_PROMPT" = "Would like like to apply the selected resolution (%tux%tu)?";
+	"APPLY_RESOLUTION_PROMPT" = "Would like like to apply the selected resolution (%tu x %tu)?";
 	"APPLY_RESOLUTION_CONFIRM" = "Apply";
 	"APPLY_RESOLUTION_CONFIRM_INVERTED" = "Apply (reversed)";
 
@@ -81,10 +82,10 @@
 	"CUSTOM_RESOLUTION_HEIGHT" = "Height (px)";
 	"CUSTOM_RESOLUTION_SAVE" = "Save Resolution";
 	"CUSTOM_RESOLUTION_SAVED_TITLE" = "Resolution saved";
-	"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" = "Your custom resolution (%tux%tu) has been saved.";
+	"CUSTOM_RESOLUTION_SAVED_DESCRIPTION" = "Your custom resolution (%tu x %tu) has been saved.";
 
 	"CUSTOM_RESOLUTION_INVALID_TITLE" = "Invalid Resolution";
-	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "The selected resolution (%tux%tu@%0.fx) is invalid and cannot be applied.";
+	"CUSTOM_RESOLUTION_INVALID_DESCRIPTION" = "The selected resolution (%tu x %tu) is invalid and cannot be applied.";
 
 	"CUSTOM_RESOLUTION_LIST_TITLE" = "Saved Resolutions";
 	"CUSTOM_RESOLUTION_LIST_NO_ENTRIES" = "Nothing to see here.";
