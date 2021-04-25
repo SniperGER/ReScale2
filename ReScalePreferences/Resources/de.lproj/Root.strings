@@ -88,4 +88,8 @@
 
 	"CUSTOM_RESOLUTION_LIST_TITLE" = "Eigene Auflösungen";
 	"CUSTOM_RESOLUTION_LIST_NO_ENTRIES" = "Hier gibt's nichts zu sehen.";
+
+	"RESOLUTION_APPLIED_TITLE" = "Re:Scale 2 hat deine Auflösung auf %tu x %tu eingestellt.";
+	"RESOLUTION_APPLIED_PROMPT" = "Wähle „OK“, um diese Auflösung weiter zu verwenden.";
+	"RESOLUTION_APPLIED_CANCEL" = "Abbrechen (%d)";
 }

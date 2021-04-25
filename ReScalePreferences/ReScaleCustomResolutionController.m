@@ -77,8 +77,10 @@
 #pragma mark - Instance Methods
 
 - (void)applyCanvasWidth:(NSUInteger)canvasWidth canvasHeight:(NSUInteger)canvasHeight {
-	CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)[NSNumber numberWithInteger:canvasWidth], CFSTR("tf.festival.rescale"));
-	CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)[NSNumber numberWithInteger:canvasHeight], CFSTR("tf.festival.rescale"));
+	CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)@(canvasWidth), CFSTR("tf.festival.rescale"));
+	CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)@(canvasHeight), CFSTR("tf.festival.rescale"));
+
+	CFPreferencesSetAppValue(CFSTR("confirmedResolution"), (CFTypeRef)@NO, CFSTR("tf.festival.rescale"));
 
 	CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 }

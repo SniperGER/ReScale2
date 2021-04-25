@@ -6,6 +6,6 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = ReScaleUIKit
 
 ReScaleUIKit_FILES = Tweak.xm
-ReScaleUIKit_CFLAGS = -fobjc-arc
+ReScaleUIKit_CFLAGS = -fobjc-arc -include Prefix.pch
 
 include $(THEOS_MAKE_PATH)/tweak.mk

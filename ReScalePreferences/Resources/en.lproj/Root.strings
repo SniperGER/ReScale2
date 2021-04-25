@@ -88,4 +88,8 @@
 
 	"CUSTOM_RESOLUTION_LIST_TITLE" = "Saved Resolutions";
 	"CUSTOM_RESOLUTION_LIST_NO_ENTRIES" = "Nothing to see here.";
+
+	"RESOLUTION_APPLIED_TITLE" = "Re:Scale 2 switched your resolution to %tu x %tu.";
+	"RESOLUTION_APPLIED_PROMPT" = "Select OK to continue using this resolution.";
+	"RESOLUTION_APPLIED_CANCEL" = "Cancel (%d)";
 }

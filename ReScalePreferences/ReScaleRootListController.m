@@ -81,11 +81,13 @@
 - (void)applyCanvasWidth:(NSUInteger)canvasWidth canvasHeight:(NSUInteger)canvasHeight {
 	// if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
 	// 	// iOS 9 (possibily other versions as well) invert the width and height
-	// 	CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)[NSNumber numberWithInteger:canvasWidth], CFSTR("tf.festival.rescale"));
-	// 	CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)[NSNumber numberWithInteger:canvasHeight], CFSTR("tf.festival.rescale"));
+	// 	CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)@(canvasWidth), CFSTR("tf.festival.rescale"));
+	// 	CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)@(canvasHeight), CFSTR("tf.festival.rescale"));
 	// } else {
-		CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)[NSNumber numberWithInteger:canvasWidth], CFSTR("tf.festival.rescale"));
-		CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)[NSNumber numberWithInteger:canvasHeight], CFSTR("tf.festival.rescale"));
+		CFPreferencesSetAppValue(CFSTR("canvas_width"), (CFTypeRef)@(canvasWidth), CFSTR("tf.festival.rescale"));
+		CFPreferencesSetAppValue(CFSTR("canvas_height"), (CFTypeRef)@(canvasHeight), CFSTR("tf.festival.rescale"));
+
+		CFPreferencesSetAppValue(CFSTR("confirmedResolution"), (CFTypeRef)@NO, CFSTR("tf.festival.rescale"));
 	// }
 
 	CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
@@ -218,7 +220,6 @@
 
 	UIAlertAction* confirmInvertedAction = [UIAlertAction actionWithTitle:[self.class localizedStringForKey:@"APPLY_RESOLUTION_CONFIRM_INVERTED" value:nil table:@"Root"] style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action) {
 		[self applyCanvasWidth:canvasHeight canvasHeight:canvasWidth];
-
 		[self respring];
 	}];
 
@@ -235,11 +236,11 @@
 }
 
 - (id)getCustomCanvasHeight {
-    return _customCanvasHeight ? [NSNumber numberWithInteger:_customCanvasHeight] : nil;
+    return _customCanvasHeight ? @(_customCanvasHeight) : nil;
 }
 
 - (id)getCustomCanvasWidth {
-    return _customCanvasWidth ? [NSNumber numberWithInteger:_customCanvasWidth] : nil;
+    return _customCanvasWidth ? @(_customCanvasWidth) : nil;
 }
 
 - (void)resetResolution {
