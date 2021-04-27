@@ -10,12 +10,18 @@
 - (SBDashBoardIdleTimerController*)idleTimerController;
 @end
 
-@interface SBDashBoardIdleTimerController : NSObject
+@interface SBDashBoardIdleTimerController : NSObject // ios 13 and up
+- (void)addIdleTimerDisabledAssertionReason:(id)arg1;
+- (void)removeIdleTimerDisabledAssertionReason:(id)arg1;
+@end
+
+@interface SBDashBoardViewController : NSObject // ios 12
 - (void)addIdleTimerDisabledAssertionReason:(id)arg1;
 - (void)removeIdleTimerDisabledAssertionReason:(id)arg1;
 @end
 
 @interface SBLockScreenManager
+@property(readonly, nonatomic) SBDashBoardViewController *dashBoardViewController; // ios 12
 + (id)sharedInstance;
 - (CSCoverSheetViewController*)coverSheetViewController;
 @end

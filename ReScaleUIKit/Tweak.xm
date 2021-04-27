@@ -21,7 +21,11 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 		__block NSTimer* countdownTimer;
 		__block int countdownSecondsRemaining = 30;
 
+if (@available(iOS 13, *)) {
 		[[[[%c(SBLockScreenManager) sharedInstance] coverSheetViewController] idleTimerController] addIdleTimerDisabledAssertionReason:@"tf.festival.rescale2.reset-resolution"];
+} else {
+		[[[%c(SBLockScreenManager) sharedInstance] dashBoardViewController] addIdleTimerDisabledAssertionReason:@"tf.festival.rescale2.reset-resolution"];
+}
 
 		UIAlertController* resetDialog = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:ReScaleLocalizedString(@"RESOLUTION_APPLIED_TITLE", nil), canvasWidth, canvasHeight]
 																			 message:ReScaleLocalizedString(@"RESOLUTION_APPLIED_PROMPT", nil)
@@ -31,8 +35,11 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			CFPreferencesSetAppValue(CFSTR("confirmedResolution"), (CFTypeRef)@YES, CFSTR("tf.festival.rescale"));
 			CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 
+if (@available(iOS 13, *)) {
 			[[[[%c(SBLockScreenManager) sharedInstance] coverSheetViewController] idleTimerController] removeIdleTimerDisabledAssertionReason:@"tf.festival.rescale2.reset-resolution"];
-
+} else {
+			[[[%c(SBLockScreenManager) sharedInstance] dashBoardViewController] removeIdleTimerDisabledAssertionReason:@"tf.festival.rescale2.reset-resolution"];
+}
 			if (countdownTimer) {
 				[countdownTimer invalidate];
 				countdownTimer = nil;
