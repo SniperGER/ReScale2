@@ -10,11 +10,6 @@
 - (void)setDisableAutoDim:(BOOL)arg1;
 @end
 
-@interface SBLockScreenManager
-+ (id)sharedInstance;
-- (CSCoverSheetViewController*)coverSheetViewController;
-@end
-
 @interface SpringBoard : UIApplication
 @end
 
