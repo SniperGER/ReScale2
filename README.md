@@ -3,7 +3,7 @@
 
 Have you ever wanted to change the screen resolution of your iPhone, iPad or iPod touch, but people told you to not mess with system files or your resolution as it could send your device into an actual boot loop? With Re:Scale 2 you can. It's safe to use and the resolution is only applied while you're jailbroken.
 
-Re:Scale 2 supports every resolution of devices that run iOS 8 or later:
+Re:Scale 2 supports every resolution of devices that run iOS 9 or later:
 
 - iPhone 4s (3.5", @2x)
 - iPhone 5/5s/5c/SE (4", @2x)
