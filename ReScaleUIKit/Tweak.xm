@@ -21,7 +21,7 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 		__block NSTimer* countdownTimer;
 		__block int countdownSecondsRemaining = 30;
 
-		[[[[%c(SBLockScreenManager) sharedInstance] coverSheetViewController] idleTimerController] addIdleTimerDisabledAssertionReason:@"tf.festival.rescale2.reset-resolution"];
+		[idleTimerDefaults setDisableAutoDim:YES];
 
 		UIAlertController* resetDialog = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:ReScaleLocalizedString(@"RESOLUTION_APPLIED_TITLE", nil), canvasWidth, canvasHeight]
 																			 message:ReScaleLocalizedString(@"RESOLUTION_APPLIED_PROMPT", nil)
@@ -31,7 +31,7 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			CFPreferencesSetAppValue(CFSTR("confirmedResolution"), (CFTypeRef)@YES, CFSTR("tf.festival.rescale"));
 			CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 
-			[[[[%c(SBLockScreenManager) sharedInstance] coverSheetViewController] idleTimerController] removeIdleTimerDisabledAssertionReason:@"tf.festival.rescale2.reset-resolution"];
+			[idleTimerDefaults setDisableAutoDim:NO];
 
 			if (countdownTimer) {
 				[countdownTimer invalidate];
@@ -43,6 +43,8 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			CFPreferencesSetAppValue(CFSTR("canvas_height"), NULL, CFSTR("tf.festival.rescale"));
 			CFPreferencesSetAppValue(CFSTR("confirmedResolution"), NULL, CFSTR("tf.festival.rescale"));
 			CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
+
+			[idleTimerDefaults setDisableAutoDim:NO];
 
 			pid_t pid;
 			int status;
@@ -76,6 +78,13 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			}
 		}];
 	}
+}
+%end
+
+%hook SBIdleTimerDefaults
+- (id)init {
+	idleTimerDefaults = %orig;
+	return idleTimerDefaults;
 }
 %end
 

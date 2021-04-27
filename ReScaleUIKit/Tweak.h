@@ -6,13 +6,8 @@
 
 @class SBDashBoardIdleTimerController;
 
-@interface CSCoverSheetViewController : UIViewController
-- (SBDashBoardIdleTimerController*)idleTimerController;
-@end
-
-@interface SBDashBoardIdleTimerController : NSObject
-- (void)addIdleTimerDisabledAssertionReason:(id)arg1;
-- (void)removeIdleTimerDisabledAssertionReason:(id)arg1;
+@interface SBIdleTimerDefaults
+- (void)setDisableAutoDim:(BOOL)arg1;
 @end
 
 @interface SBLockScreenManager
@@ -27,3 +22,7 @@
 - (void)dismissAnimated:(BOOL)arg1;
 - (void)_dismissAnimated:(BOOL)arg1 triggeringAction:(id)arg2;
 @end
+
+
+
+static SBIdleTimerDefaults* idleTimerDefaults;
