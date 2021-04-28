@@ -6,8 +6,24 @@
 
 @class SBDashBoardIdleTimerController;
 
+@interface SBBacklightController : NSObject
++ (id)sharedInstance;
+- (void)autoLockPrefsChanged;				// iOS 9-10
+@end
+
 @interface SBIdleTimerDefaults
 - (void)setDisableAutoDim:(BOOL)arg1;
+@end
+
+@interface SBIdleTimerGlobalCoordinator : NSObject
++ (id)sharedInstance;
+- (void)_idleTimerPrefsChanged;				// iOS 11
+- (void)_updateAutoDimDisableAssertion;		// iOS 12
+@end
+
+@interface SBIdleTimerGlobalStateMonitor : NSObject
++ (id)sharedInstance;
+- (void)_updateAutoDimDisabled;				// iOS 13-14
 @end
 
 @interface SpringBoard : UIApplication

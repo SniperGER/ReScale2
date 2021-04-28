@@ -14,14 +14,15 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 - (void)applicationDidFinishLaunching:(id)arg1 {
 	%orig;
 
+	// Should not have used this in the first place. Sorry, @everyone!
+	[idleTimerDefaults setDisableAutoDim:NO];
+
 	NSInteger canvasWidth = CFPreferencesGetAppIntegerValue(CFSTR("canvas_width"), CFSTR("tf.festival.rescale"), NULL);
 	NSInteger canvasHeight = CFPreferencesGetAppIntegerValue(CFSTR("canvas_height"), CFSTR("tf.festival.rescale"), NULL);
 
 	if ((canvasWidth && canvasHeight) && !CFPreferencesGetAppBooleanValue(CFSTR("confirmedResolution"), CFSTR("tf.festival.rescale"), NULL)) {
 		__block NSTimer* countdownTimer;
 		__block int countdownSecondsRemaining = 30;
-
-		[idleTimerDefaults setDisableAutoDim:YES];
 
 		UIAlertController* resetDialog = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:ReScaleLocalizedString(@"RESOLUTION_APPLIED_TITLE", nil), canvasWidth, canvasHeight]
 																			 message:ReScaleLocalizedString(@"RESOLUTION_APPLIED_PROMPT", nil)
@@ -31,7 +32,15 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			CFPreferencesSetAppValue(CFSTR("confirmedResolution"), (CFTypeRef)@YES, CFSTR("tf.festival.rescale"));
 			CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 
-			[idleTimerDefaults setDisableAutoDim:NO];
+			if (@available(iOS 13, *)) {
+				[[%c(SBIdleTimerGlobalStateMonitor) sharedInstance] _updateAutoDimDisabled];
+			} else if (@available(iOS 12, *)) {
+				[[%c(SBIdleTimerGlobalCoordinator) sharedInstance] _updateAutoDimDisableAssertion];
+			} else if (@available(iOS 111, *)) {
+				[[%c(SBIdleTimerGlobalCoordinator) sharedInstance] _idleTimerPrefsChanged];
+			} else {
+				[[%c(SBBacklightController) sharedInstance] autoLockPrefsChanged];
+			}
 
 			if (countdownTimer) {
 				[countdownTimer invalidate];
@@ -44,7 +53,15 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			CFPreferencesSetAppValue(CFSTR("confirmedResolution"), NULL, CFSTR("tf.festival.rescale"));
 			CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 
-			[idleTimerDefaults setDisableAutoDim:NO];
+			if (@available(iOS 13, *)) {
+				[[%c(SBIdleTimerGlobalStateMonitor) sharedInstance] _updateAutoDimDisabled];
+			} else if (@available(iOS 12, *)) {
+				[[%c(SBIdleTimerGlobalCoordinator) sharedInstance] _updateAutoDimDisableAssertion];
+			} else if (@available(iOS 111, *)) {
+				[[%c(SBIdleTimerGlobalCoordinator) sharedInstance] _idleTimerPrefsChanged];
+			} else {
+				[[%c(SBBacklightController) sharedInstance] autoLockPrefsChanged];
+			}
 
 			pid_t pid;
 			int status;
@@ -85,6 +102,17 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 - (id)init {
 	idleTimerDefaults = %orig;
 	return idleTimerDefaults;
+}
+
+- (BOOL)disableAutoDim {
+	NSInteger canvasWidth = CFPreferencesGetAppIntegerValue(CFSTR("canvas_width"), CFSTR("tf.festival.rescale"), NULL);
+	NSInteger canvasHeight = CFPreferencesGetAppIntegerValue(CFSTR("canvas_height"), CFSTR("tf.festival.rescale"), NULL);
+
+	if ((canvasWidth && canvasHeight) && !CFPreferencesGetAppBooleanValue(CFSTR("confirmedResolution"), CFSTR("tf.festival.rescale"), NULL)) {
+		return YES;
+	}
+
+	return %orig;
 }
 %end
 
