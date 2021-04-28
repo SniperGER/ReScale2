@@ -57,5 +57,7 @@
 %ctor {
 	if (access("/var/lib/dpkg/info/tf.festival.rescale2.list", F_OK) == -1) return;
 
-	%init();
+	if (UIApplication.sharedApplication) {
+		%init();
+	}
 }
