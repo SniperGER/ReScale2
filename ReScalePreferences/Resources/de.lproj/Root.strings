@@ -29,6 +29,21 @@
 	"STATUS_BAR_SPLIT65_ZOOMED" = "iPhone – Geteilt, 6.5\" Vergrößert";
 	"STATUS_BAR_SPLIT67" = "iPhone – Geteilt, 6.7\"";
 	"STATUS_BAR_IOS" = "iOS";
+	"STATUS_BAR_DYNAMIC_SPLIT" = "iPhone – Geteilt, Dynamisch";
+	"STATUS_BAR_DYNAMIC_SPLIT_MEDIUM" = "iPhone – Geteilt, Dynamisch (Medium)";
+	"STATUS_BAR_EXTERNAL_PAD" = "iPad – Externer Bildschirm";
+	"STATUS_BAR_FIXED_SPLIT" = "iPhone – Geteilt, Fixiert";
+	"STATUS_BAR_PILL" = "iPhone – Dynamic Island";
+	"STATUS_BAR_SPLIT_828" = "iPhone – 828px";
+	"STATUS_BAR_SPLIT_1080" = "iPhone – 1080px";
+	"STATUS_BAR_SPLIT_1080_WIDE" = "iPhone – 1080px Breit";
+	"STATUS_BAR_SPLIT_1125" = "iPhone – 1125px";
+	"STATUS_BAR_SPLIT_1170" = "iPhone – 1170px";
+	"STATUS_BAR_SPLIT_1170_WIDE" = "iPhone – 1170px Breit";
+	"STATUS_BAR_SPLIT_1242" = "iPhone – 1242px";
+	"STATUS_BAR_SPLIT_1284" = "iPhone – 1284px";
+	"STATUS_BAR_SPLIT_1284_WIDE" = "iPhone – 1284px Breit";
+
 
 	"IPHONE" = "iPhone";
 
@@ -39,17 +54,20 @@
 	"iphone58" = "iPhone X/XS, 11 Pro (5.8\", @3x)";
 	"iphone61" = "iPhone XR (6.1\", @2x)";
 	"iphone65" = "iPhone XS Max, 11 Pro Max (6.5\", @3x)";
-	"iphone61-12pro" = "iPhone 12/12 Pro (6.1\", @3x)";
+	"iphone61-12pro" = "iPhone 12/12 Pro, 13/13 Pro (6.1\", @3x)";
 	"iphone54-12mini" = "iPhone 12 mini (5.4\", @3x)";
-	"iphone67-12promax" = "iPhone 12 Pro Max (6.7\", @3x)";
+	"iphone67-12promax" = "iPhone 12 Pro Max, 13 Pro Max, 14 Plus (6.7\", @3x)";
+	"iphone61-14pro" = "iPhone 14 Pro (6.1\", @3x)";
+	"iphone67-14promax" = "iPhone 14 Pro Max (6.7\", @3x)";
 
 	"IPAD" = "iPad";
 
+	"ipad79" = "iPad mini 6 (7.9\", @2x)";
 	"ipad97-1x" = "iPad 2, iPad mini (9.7\", @1x)";
 	"ipad97" = "iPad 3/4/5/6, Air 1/2, mini 2/3/4/5, Pro (9.7\", @2x)";
-	"ipad102" = "iPad 7/8 (10.2\", @2x)";
+	"ipad102" = "iPad 7/8/9 (10.2\", @2x)";
 	"ipad105" = "iPad Air 3, Pro (10.5\", @2x)";
-	"ipad109" = "iPad Air 4 (10.9\", @2x)";
+	"ipad109" = "iPad 10, Air 4/5 (10.9\", @2x)";
 	"ipad11" = "iPad Pro (11\", @2x)";
 	"ipad129" = "iPad Pro (12.9\", @2x)";
 

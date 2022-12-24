@@ -60,6 +60,20 @@
 				<string>STATUS_BAR_SPLIT65_ZOOMED</string>
 				<string>STATUS_BAR_SPLIT67</string>
 				<string>STATUS_BAR_IOS</string>
+				<string>STATUS_BAR_DYNAMIC_SPLIT</string>
+				<string>STATUS_BAR_DYNAMIC_SPLIT_MEDIUM</string>
+				<string>STATUS_BAR_EXTERNAL_PAD</string>
+				<string>STATUS_BAR_FIXED_SPLIT</string>
+				<string>STATUS_BAR_PILL</string>
+				<string>STATUS_BAR_SPLIT_828</string>
+				<string>STATUS_BAR_SPLIT_1080</string>
+				<string>STATUS_BAR_SPLIT_1080_WIDE</string>
+				<string>STATUS_BAR_SPLIT_1125</string>
+				<string>STATUS_BAR_SPLIT_1170</string>
+				<string>STATUS_BAR_SPLIT_1170_WIDE</string>
+				<string>STATUS_BAR_SPLIT_1242</string>
+				<string>STATUS_BAR_SPLIT_1284</string>
+				<string>STATUS_BAR_SPLIT_1284_WIDE</string>
 			</array>
 			<key>validValues</key>
 			<array>
@@ -87,6 +101,20 @@
 				<string>_UIStatusBarVisualProvider_Split65_Zoomed</string>
 				<string>_UIStatusBarVisualProvider_Split67</string>
 				<string>_UIStatusBarVisualProvider_iOS</string>
+				<string>_UIStatusBarVisualProvider_DynamicSplit</string>
+				<string>_UIStatusBarVisualProvider_DynamicSplitMedium</string>
+				<string>_UIStatusBarVisualProvider_ExternalPad</string>
+				<string>_UIStatusBarVisualProvider_FixedSplit</string>
+				<string>_UIStatusBarVisualProvider_PillRegionCoordinator</string>
+				<string>_UIStatusBarVisualProvider_Split828</string>
+				<string>_UIStatusBarVisualProvider_Split1080</string>
+				<string>_UIStatusBarVisualProvider_Split1080_Wide</string>
+				<string>_UIStatusBarVisualProvider_Split1125</string>
+				<string>_UIStatusBarVisualProvider_Split1170</string>
+				<string>_UIStatusBarVisualProvider_Split1170_Wide</string>
+				<string>_UIStatusBarVisualProvider_Split1242</string>
+				<string>_UIStatusBarVisualProvider_Split1284</string>
+				<string>_UIStatusBarVisualProvider_Split1284_Wide</string>
 			</array>
 			<key>staticTextMessage</key>
 			<string>STATUS_BAR_OVERRIDE_FOOTER</string>

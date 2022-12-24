@@ -128,9 +128,45 @@
 			<key>screenScale</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>canvas_height</key>
+			<integer>2556</integer>
+			<key>canvas_width</key>
+			<integer>1179</integer>
+			<key>deviceType</key>
+			<string>iphone61-14pro</string>
+			<key>minOSVersion</key>
+			<string>16.0</string>
+			<key>screenScale</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>canvas_height</key>
+			<integer>2796</integer>
+			<key>canvas_width</key>
+			<integer>1290</integer>
+			<key>deviceType</key>
+			<string>iphone67-14promax</string>
+			<key>minOSVersion</key>
+			<string>16.0</string>
+			<key>screenScale</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>1</key>
 	<array>
+		<dict>
+			<key>canvas_height</key>
+			<integer>2266</integer>
+			<key>canvas_width</key>
+			<integer>1488</integer>
+			<key>deviceType</key>
+			<string>ipad79</string>
+			<key>minOSVersion</key>
+			<string>15.0</string>
+			<key>screenScale</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>canvas_height</key>
 			<integer>1024</integer>
@@ -139,7 +175,7 @@
 			<key>deviceType</key>
 			<string>ipad97-1x</string>
 			<key>maxOSVersion</key>
-			<string>9.3.5</string>
+			<string>9.3.99</string>
 			<key>minOSVersion</key>
 			<string>8.0</string>
 			<key>screenScale</key>
