@@ -52,6 +52,7 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 			CFPreferencesSetAppValue(CFSTR("canvas_width"), NULL, CFSTR("tf.festival.rescale"));
 			CFPreferencesSetAppValue(CFSTR("canvas_height"), NULL, CFSTR("tf.festival.rescale"));
 			CFPreferencesSetAppValue(CFSTR("confirmedResolution"), NULL, CFSTR("tf.festival.rescale"));
+			CFPreferencesSetAppValue(CFSTR("statusBarOverride"), NULL, CFSTR("tf.festival.rescale"));
 			CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
 
 			if (@available(iOS 13, *)) {
@@ -90,7 +91,18 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 
 			if (countdownSecondsRemaining <= 0) {
 				[timer invalidate];
-				[resetDialog _dismissAnimated:YES triggeringAction:cancelAction];
+				// [resetDialog _dismissAnimated:YES triggeringAction:cancelAction];
+				CFPreferencesSetAppValue(CFSTR("canvas_width"), NULL, CFSTR("tf.festival.rescale"));
+				CFPreferencesSetAppValue(CFSTR("canvas_height"), NULL, CFSTR("tf.festival.rescale"));
+				CFPreferencesSetAppValue(CFSTR("confirmedResolution"), NULL, CFSTR("tf.festival.rescale"));
+				CFPreferencesSetAppValue(CFSTR("statusBarOverride"), NULL, CFSTR("tf.festival.rescale"));
+				CFPreferencesAppSynchronize(CFSTR("tf.festival.rescale"));
+
+				pid_t pid;
+				int status;
+				const char* args[] = {"killall", "-9", "backboardd", "aggregated", NULL};
+				posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+				waitpid(pid, &status, WEXITED);
 
 				return;
 			}
@@ -124,6 +136,10 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 	NSString* visualProvider = (__bridge NSString*)CFPreferencesCopyAppValue(CFSTR("statusBarOverride"), CFSTR("tf.festival.rescale"));
 	if (visualProvider && NSClassFromString(visualProvider)) {
 		return NSClassFromString(visualProvider);
+	} else {
+		if (!NSClassFromString(visualProvider)) {
+			NSLog(@"[ReScale2] no status bar provider for class %@", visualProvider);
+		}
 	}
 
 	return %orig;
@@ -133,6 +149,10 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 	NSString* visualProvider = (__bridge NSString*)CFPreferencesCopyAppValue(CFSTR("statusBarOverride"), CFSTR("tf.festival.rescale"));
 	if (visualProvider && NSClassFromString(visualProvider)) {
 		return NSClassFromString(visualProvider);
+	} else {
+		if (!NSClassFromString(visualProvider)) {
+			NSLog(@"[ReScale2] no status bar provider for class %@", visualProvider);
+		}
 	}
 
 	return %orig;
