@@ -9,4 +9,5 @@ include $(THEOS)/makefiles/common.mk
 
 SUBPROJECTS += ReScale ReScaleUIKit ReScaleKB
 SUBPROJECTS += ReScalePreferences
+SUBPROJECTS += ReScaleActivator
 include $(THEOS_MAKE_PATH)/aggregate.mk
