@@ -10,6 +10,7 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 	return [localizableBundle localizedStringForKey:key value:value table:table];
 }
 
+%group SpringBoard
 %hook SpringBoard
 - (void)applicationDidFinishLaunching:(id)arg1 {
 	%orig;
@@ -96,7 +97,7 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 		}];
 	}
 }
-%end
+%end	/// %hook SpringBoard
 
 %hook SBIdleTimerDefaults
 - (id)init {
@@ -114,8 +115,10 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 
 	return %orig;
 }
-%end
+%end	/// %hook SBIdleTimerDefaults
+%end	// %group SpringBoard
 
+%group Applications
 %hook _UIStatusBarVisualProvider_iOS
 + (Class)visualProviderSubclassForScreen:(id)arg1 {
 	NSString* visualProvider = (__bridge NSString*)CFPreferencesCopyAppValue(CFSTR("statusBarOverride"), CFSTR("tf.festival.rescale"));
@@ -134,10 +137,17 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 
 	return %orig;
 }
-%end
+%end	/// %hook _UIStatusBarVisualProvider_iOS
+%end	// %group Applications
 
 %ctor {
 	if (access("/var/lib/dpkg/info/tf.festival.rescale2.list", F_OK) == -1) return;
 
-	%init();
+	if ([[NSBundle mainBundle].bundleIdentifier isEqualToString:@"com.apple.springboard"]) {
+		%init(SpringBoard)
+	}
+
+	if (UIApplication.sharedApplication) {
+		%init(Applications);
+	}
 }
