@@ -110,4 +110,12 @@
 	"RESOLUTION_APPLIED_TITLE" = "Re:Scale 2 switched your resolution to %tu x %tu.";
 	"RESOLUTION_APPLIED_PROMPT" = "Select OK to continue using this resolution.";
 	"RESOLUTION_APPLIED_CANCEL" = "Cancel (%d)";
+
+	"BUTTON_WHATS_NEW" = "What's New";
+	"BUTTON_REPORT_ISSUE" = "Report Issue";
+	"BUTTON_MAKE_DONATION" = "Donate";
+
+	"COPYRIGHT_FOOTER" = "Re:Scale 2 (1.0.5) – Made with ❤️ by Team FESTIVAL";
+
+	"WHATS_NEW_TITLE" = "Re:Scale 2 – What's New";
 }

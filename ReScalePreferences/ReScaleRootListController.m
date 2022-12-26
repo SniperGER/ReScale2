@@ -1,6 +1,7 @@
 #include <spawn.h>
 
 #include "ReScaleRootListController.h"
+#include "ReScaleWhatsNewController.h"
 
 @implementation ReScaleRootListController
 
@@ -243,6 +244,14 @@
     return _customCanvasWidth ? @(_customCanvasWidth) : nil;
 }
 
+- (void)makeDonation {
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://paypal.me/SniperGER"] options:@{} completionHandler:nil];
+}
+
+- (void)reportIssue {
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/SniperGER/LockWatch2"] options:@{} completionHandler:nil];
+}
+
 - (void)resetResolution {
 	BOOL isiPad = UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad;
 
@@ -342,6 +351,13 @@
 
 - (void)setCustomCanvasWidth:(id)value {
     _customCanvasWidth = [value integerValue];
+}
+
+- (void)showWhatsNew {
+	ReScaleWhatsNewController* whatsNewController = [ReScaleWhatsNewController new];
+	UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:whatsNewController];
+	[navigationController setModalPresentationStyle:UIModalPresentationFormSheet];
+	[self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

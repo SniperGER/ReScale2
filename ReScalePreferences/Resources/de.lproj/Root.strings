@@ -111,4 +111,12 @@
 	"RESOLUTION_APPLIED_TITLE" = "Re:Scale 2 hat deine Auflösung auf %tu x %tu eingestellt.";
 	"RESOLUTION_APPLIED_PROMPT" = "Wähle „OK“, um diese Auflösung weiter zu verwenden.";
 	"RESOLUTION_APPLIED_CANCEL" = "Abbrechen (%d)";
+
+	"BUTTON_WHATS_NEW" = "Neuigkeiten";
+	"BUTTON_REPORT_ISSUE" = "Problem melden";
+	"BUTTON_MAKE_DONATION" = "Spenden";
+
+	"COPYRIGHT_FOOTER" = "Re:Scale 2 (1.0.5) – Mit ❤️ gemacht von Team FESTIVAL";
+
+	"WHATS_NEW_TITLE" = "Re:Scale 2 – Neuigkeiten";
 }

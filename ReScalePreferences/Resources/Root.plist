@@ -219,6 +219,48 @@
 			<key>label</key>
 			<string>CUSTOM_RESOLUTION_SAVE</string>
 		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>showWhatsNew</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>BUTTON_WHATS_NEW</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>makeDonation</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>BUTTON_MAKE_DONATION</string>
+			<key>icon</key>
+			<string>paypal</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>reportIssue</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>BUTTON_REPORT_ISSUE</string>
+			<key>icon</key>
+			<string>github</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>COPYRIGHT_FOOTER</string>
+			<key>footerAlignment</key>
+			<real>1</real>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>Re:Scale 2</string>
