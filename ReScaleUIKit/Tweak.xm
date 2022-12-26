@@ -164,10 +164,10 @@ NSString* ReScaleLocalizedString(NSString* key, NSString* value, NSString* table
 	if (access("/var/lib/dpkg/info/tf.festival.rescale2.list", F_OK) == -1) return;
 
 	if ([[NSBundle mainBundle].bundleIdentifier isEqualToString:@"com.apple.springboard"]) {
-		%init(SpringBoard)
+		%init(SpringBoard);
 	}
 
-	if (UIApplication.sharedApplication) {
+	if ([[NSBundle mainBundle].bundleIdentifier isEqualToString:@"com.apple.springboard"] || UIApplication.sharedApplication) {
 		%init(Applications);
 	}
 }

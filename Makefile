@@ -1,6 +1,6 @@
 THEOS_DEVICE_IP = Janiks-iPhone-X.local
 
-PACKAGE_VERSION = 1.0.5
+PACKAGE_VERSION = 1.0.5-1
 
 INSTALL_TARGET_PROCESSES = backboardd aggregated
 # INSTALL_TARGET_PROCESSES = Preferences
